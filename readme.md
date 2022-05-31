@@ -1,6 +1,6 @@
 # Go-ThaiNum
 
-**Are you convervative? Wanna use Thai numerals everywhere even coding? Good!**
+**Are you conservative? Wanna use Thai numerals everywhere even coding? Good!**
 
 This package will allow you to convert Thai numerals string to integer and float numbers type and vice versa.
 
