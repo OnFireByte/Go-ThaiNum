@@ -1,6 +1,7 @@
 package thaiNum
 
 import (
+	"fmt"
 	"strconv"
 )
 
@@ -71,4 +72,29 @@ func Atoi(s string) (int, error) {
 
 func ParseFloat(s string) (float64, error) {
 	return strconv.ParseFloat(toArabic(s), 64)
+}
+
+func Print(a ...any) (n int, err error){
+	var res []interface{}
+	for _, v := range a {
+		res = append(res, ToThaiNum(fmt.Sprint(v)))
+	}
+	return fmt.Print(res...)
+}
+
+func Println(a ...any) (n int, err error) {
+	var res []interface{}
+	for _, v := range a {
+		res = append(res, ToThaiNum(fmt.Sprint(v)))
+	}
+	return fmt.Println(res...)
+}
+
+func Printf(format string, a ...any) (n int, err error){
+	return fmt.Print(Sprintf(format, a...))
+	
+}
+
+func Sprintf(format string, a ...any)string{
+	return ToThaiNum(fmt.Sprintf(format, a...))
 }
